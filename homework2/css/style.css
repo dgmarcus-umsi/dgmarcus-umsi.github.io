@@ -1,26 +1,23 @@
  body {
     font-family: Lucida Grande, sans-serif; 
-    background-color: black;
+    color: #000000;
   }
 
  h1 {
  	font-size: 64px;
  	text-align: center;
- 	background-color: #000000;
  	color:#FFFFFF;
  }
 
  h2 {
  	font-size: 30px;
  	text-shadow: 5px 5px #808080
- 	background-color: #000000;
  	color:#FFFFFF;
  }
 
  p {
  	font-size: 24px;
  	padding-top: 20px;
- 	background-color: #000000;
  	color:#FFFFFF;
  }
 
