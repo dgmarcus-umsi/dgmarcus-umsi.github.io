@@ -1,14 +1,26 @@
+<!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <title>Hello, WebVR! • A-Frame</title>
+    <meta name="description" content="Hello, WebVR! • A-Frame">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+    <a-scene background="color: #FAFAFA">
+      <a-assets>
+        <video id="band" autoplay loop="true" src="https://youtu.be/lCdXyj57HO0?t=72"></video>
+        <img id="sechelt" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">     
+      </a-assets>
+      <!--<a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow></a-box>
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow></a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>-->
+      <a-sky id="image-360" radius="10" src="#sechelt"></a-sky>
+      <a-video src="movie.mp4" width="16" height="9" position="0 0 -5"></a-video>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="purple" shadow></a-plane>
+      <a-plane position="0 1 -5" rotation="-10 0 0" width="4" height="4" color="black" background="#band" shadow></a-plane>
+      <a-plane position="4 1 -5" rotation="-10 -10 0" width="4" height="4" color="grey" shadow></a-plane>
+      <a-plane position="-4 1 -5" rotation="-10 10 0" width="4" height="4" color="grey" shadow></a-plane>
     </a-scene>
   </body>
 </html>
