@@ -1,35 +1,56 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-<script>
-  AFRAME.registerComponent('change-color-on-hover', {
-    schema: {
-      color: {default: 'red'}
-    },
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, WebVR! • A-Frame</title>
+    <meta name="description" content="Hello, WebVR! • A-Frame">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 
-    init: function () {
-      var data = this.data;
-      var el = this.el;  // <a-box>
-      var defaultColor = el.getAttribute('material').color;
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+  </head>
 
-      el.addEventListener('mouseenter', function () {
-        el.setAttribute('color', data.color);
-      });
+  <body>
+    <!--Default background color of the scene.-->
+    <a-scene background="color: #FAFAFA">
 
-      el.addEventListener('mouseleave', function () {
-        el.setAttribute('color', defaultColor);
-      });
-    }
-  });
-</script>
-</head>
-<body>
-  <a-scene>
-    <a-box color="#EF2D5E" position="0 1 -4" change-color-on-hover="color: blue"></a-box>
+      <a-assets>
+        <!--import 360 background image.-->
+        <img id="sechelt" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
+      </a-assets>
 
-    <a-camera><a-cursor></a-cursor></a-camera>
-  </a-scene>
-</body>
+      <!--Explicitly define <a-camera> entity. Previously, A-Frame was providing the default camera.-->
+      <a-camera>
+        <!--Add <a-cursor> entity as a child element underneath the camera entity.-->
+        <a-cursor>
+          
+        </a-cursor>
+      </a-camera>
+
+      <!--Scene entities.-->
+      <a-sky id="image-360" radius="10" src="#sechelt"></a-sky>
+      <a-image position="0 1.5 -4" width="5" height="3" rotation="-10 0 0" src="kyle-wong-rrHtkX1rLP0-unsplash.jpg"></a-image>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="purple" shadow></a-plane>
+      <a-plane position="0 1 -5" rotation="-10 0 0" width="4" height="4" color="black" background="#band" shadow></a-plane>
+      <a-plane position="4 1 -5" rotation="-10 -10 0" width="4" height="4" color="grey" shadow></a-plane>
+      <a-plane position="-4 1 -5" rotation="-10 10 0" width="4" height="4" color="grey" shadow></a-plane>
+
+      <!--Test ground.-->
+      <a-text value="Welcome to your new room!" position="-1.5 4 -5" color="#000" scale="1.5 1.5 1.5"></a-text>
+
+    </a-scene>
+  </body>
 </html>
+
+
+<!--increase accessability by making itneractions operable by only gaze!-->
+<!--change the 360 background to show the different effects with each button click, ie one where there are lights then no lights, subtitiles, friend joins, etc--make them a series of events and event listeners using javascript?-->
+
+<!--TODO
+- create settings button
+- create control panel
+- when gazing at control panel (or clicking?) show new options
+- change background image to reflect new options (like captions)
+  -->
+
+
