@@ -41,26 +41,42 @@
       <!--<a-box position="1 -.9 -2" rotation="-30 0 0" width=".6" height=".6" color="white" event-set__enter="_event: mouseenter; _target: #light; visible: true"></a-box>-->
       <!--settings button-->
       <!--<a-image position="1 -.9 -2" width=".5" height=".5" rotation="-30 0 0" src="settings.png"></a-image>-->
+      
       <a-entity id="settings">
-       <!--<a-box id="panel" position="0 -.5 -2" rotation="-50 0 0" width="4" height="1.5" color="purple" visible="true"></a-box>-->
+        
+        <!--Background panel-->
+        <a-box id="panel" position="0 -.8 -2" rotation="-50 0 0" width="4.5" height="2.3" color="black" visible="true"></a-box>    
+        
+        <!--Volume-->
         <a-cylinder position="-1.45 -.1 -1.2" rotation="-50 0 0" radius=".03" height=".9" color="white"></a-cylinder>
         <a-cylinder position="-1.45 .2 -1.6" rotation="-140 0 90" radius=".03" height=".2" color="white"></a-cylinder>
         <a-cylinder position="-1.45 -.4 -.8" rotation="-140 0 90" radius=".03" height=".2" color="white"></a-cylinder>
-        <a-sphere position="-1.45 -.1 -1.2" rotation="-140 0 90" radius=".1" color="blue"></a-sphere>
+        <a-sphere position="-1.45 -.1 -1.2" rotation="-140 0 90" radius=".1" color="indigo"></a-sphere>
         <a-text value="Volume" align="center" position="-1.45 .2 -2" rotation="-50 0 0" color="white" visible="true"></a-text>
         
+        <!--Light effects test-->
         <a-text value="Light Effects" align="left" position="-.5 .2 -2" rotation="-50 0 0" color="white" visible="true"></a-text>
           <a-text value="On" align="left" position="-.3 -.03 -1.77" rotation="-50 0 0" color="white" visible="true"></a-text>
           <a-text value="Off" align="left" position=".2 -.03 -1.77" rotation="-50 0 0" color="white" height=".1" visible="true"></a-text>
           <a-text value="No Strobes" align="left" position=".7 -.03 -1.77" rotation="-50 0 0" color="white" height=".1" visible="true"></a-text>
         
+        <!--Captions text-->
         <a-text value="Captions" align="left" position="-.5 -.3 -1.5" rotation="-50 0 0" color="white" visible="true"></a-text>
           <a-text value="On" align="left" position="-.3 -.53 -1.27" rotation="-50 0 0" color="white" visible="true"></a-text>
           <a-text value="Off" align="left" position=".2 -.53 -1.27" rotation="-50 0 0" color="white" height=".1" visible="true"></a-text>
-        <a-text value="Audio Output" align="left" position="-.5 -.8 -1" rotation="-50 0 0" color="white" visible="true"></a-text>
-
-      <!-- <a-box position="0 -.4 -2" rotation="-50 0 0" width="2" height=".5" color="white" ></a-box>-->
+        
+        <!--Text circles-->
+        <a-cylinder radius=".2" opacity=".5" position=".4 -.59 -1.33" rotation="40 0 0" color="indigo" height=".1" ></a-cylinder>
+        <a-cylinder radius=".2" opacity=".5" position="-.13 -.09 -1.83" rotation="40 0 0" color="indigo" height=".1" ></a-cylinder>
+        <!-- <a-box position="0 -.4 -2" rotation="-50 0 0" width="2" height=".5" color="white" ></a-box>-->
+      
+        <!--Closeout "button"-->
+        <a-cylinder position="1.3 .6 -1.6" rotation="-60 0 45" radius=".02" height=".2" color="white"></a-cylinder>
+        <a-cylinder position="1.3 .6 -1.6" rotation="-60 0 -45" radius=".02" height=".2" color="white"></a-cylinder>
+        
       </a-entity>
+      
+      
       
                                                     <!--create new w/ visible="false", use ^ workflow, set visible: true-->
       
@@ -69,7 +85,7 @@
       <!--Explicitly define <a-camera> entity. Previously, A-Frame was providing the default camera.-->
       <a-camera>
         <!--Add <a-cursor> entity as a child element underneath the camera entity.-->
-        <a-cursor>
+        <a-cursor color="springgreen">
           
         </a-cursor>
       </a-camera>
