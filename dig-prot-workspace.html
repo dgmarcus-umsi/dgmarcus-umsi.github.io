@@ -16,16 +16,17 @@
       <a-assets>
         <!--import 360 background image.-->
         <img id="bg" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
+         <video id="the-band" autoplay loop="true" src="the-band.mp4"></video>
       </a-assets>
 
       
 
       <!--Scene entities.-->
       <a-sky id="image-360" radius="10" src="#bg"></a-sky>
-      <a-video position="0 1.5 -4" width="5" height="3" rotation="-10 0 0" autoplay loop="true" src="https://www.youtube.com/watch?v=GbJjT5q48C8&ab_channel=Dead%26Company"></a-video>
+      <a-video position="0 1.5 -4" width="5" height="3" rotation="-10 0 0" src="#the-band"></a-video>
       <!--<a-image position="0 1.5 -4" width="5" height="3" rotation="-10 0 0" src="kyle-wong-rrHtkX1rLP0-unsplash.jpg"></a-image>-->
       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="3" color="#16191f" shadow></a-plane>
-      <a-plane position="0 1 -5" rotation="-10 0 0" width="4" height="4" color="black" background="#band" shadow></a-plane>
+     <!-- <a-plane position="0 1 -5" rotation="-10 0 0" width="4" height="4" color="black" background="#band" shadow></a-plane>-->
       <a-plane position="4 1 -5" rotation="-10 -10 0" width="4" height="4" color="#303030" shadow></a-plane>
       <a-plane position="-4 1 -5" rotation="-10 10 0" width="4" height="4" color="#303030" shadow></a-plane>
       
