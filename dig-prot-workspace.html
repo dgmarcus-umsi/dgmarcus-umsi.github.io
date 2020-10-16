@@ -16,21 +16,21 @@
       <a-assets>
         <!--import 360 background image.-->
         <img id="bg" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
-         <video id="the-band" autoplay loop="true" src="the-band.mp4"></video>
       </a-assets>
 
+      
 
       <!--Scene entities.-->
       <a-sky id="image-360" radius="10" src="#bg"></a-sky>
-      <a-video position="0 1.5 -4" width="5" height="3" rotation="-10 0 0" src="#the-band"></a-video>
-      <!--<a-image position="0 1.5 -4" width="5" height="3" rotation="-10 0 0" src="kyle-wong-rrHtkX1rLP0-unsplash.jpg"></a-image>-->
+      <!--<a-video position="0 1.5 -4" width="5" height="3" rotation="-10 0 0" autoplay loop="true" src="https://www.youtube.com/1e27f83f-67a5-d14b-94d9-f9fe2e253293"></a-video>-->
+      <a-image position="0 1.5 -4" width="5" height="3" rotation="-10 0 0" src="https://images.unsplash.com/photo-1474692295473-66ba4d54e0d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1876&q=80"></a-image>
       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="3" color="#16191f" shadow></a-plane>
      <!-- <a-plane position="0 1 -5" rotation="-10 0 0" width="4" height="4" color="black" background="#band" shadow></a-plane>-->
       <a-plane position="4 1 -5" rotation="-10 -10 0" width="4" height="4" color="#303030" shadow></a-plane>
       <a-plane position="-4 1 -5" rotation="-10 10 0" width="4" height="4" color="#303030" shadow></a-plane>
       
       <!--lights-->
-      <a-entity id="light" visible="true">
+      <a-entity id="light" visible="false">
         <a-cylinder opacity=".5" position="1 1.5 -3" rotation="-30 60 0" radius="0.15" height="3.2" color="#FFC65D"></a-cylinder>
         <a-cylinder opacity=".5" position="-2 1.5 -3" rotation="-50 -60 0" radius="0.15" height="3.6" color="#FFC65D"></a-cylinder>
         <a-cylinder opacity=".5" position="-.5 2 -3" rotation="-60 -10 0" radius="0.15" height="3.6" color="#FFC65D"></a-cylinder>
@@ -38,9 +38,9 @@
       </a-entity>
       
      
-     <!-- <a-box position="1 -.9 -2" rotation="-30 0 0" width=".6" height=".6" color="white" event-set__enter="_event: mouseenter; _target: #light; visible: true"></a-box>-->
+     <!-- <a-plane position="1 -.9 -2" rotation="-30 0 0" width=".6" height=".1" color="white" event-set__enter="_event: mouseenter; _target: #light; visible: true"></a-plane>-->
       <!--settings button-->
-      <a-image position="1 -.9 -2" width=".5" height=".5" rotation="-30 0 0" src="settings.png"></a-image>
+     <!-- <a-image position="1 -.9 -2" width=".5" height=".5" rotation="-30 0 0" src="data:image/png;base64,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"></a-image>-->
       
       <a-entity id="settings" visible="false">
         
@@ -66,21 +66,19 @@
           <a-text value="Off" align="left" position=".2 -.53 -1.27" rotation="-50 0 0" color="white" height=".1" visible="true"></a-text>
         
         <!--Text circles-->
-        <a-cylinder radius=".2" opacity=".5" position=".4 -.59 -1.33" rotation="40 0 0" color="indigo" height=".1" ></a-cylinder>
-        <a-cylinder radius=".2" opacity=".5" position="-.13 -.09 -1.83" rotation="40 0 0" color="indigo" height=".1" ></a-cylinder>
+        <a-cylinder radius=".2" opacity=".5" position="-.14 -.59 -1.33" rotation="40 0 0" color="indigo" height=".1" ></a-cylinder>
+        <a-cylinder radius=".2" opacity=".5" position=".4 -.09 -1.83" rotation="40 0 0" color="indigo" height=".1" ></a-cylinder>
         <!-- <a-box position="0 -.4 -2" rotation="-50 0 0" width="2" height=".5" color="white" ></a-box>-->
       
         <!--Closeout "button"-->
         <a-cylinder position="1.3 .6 -1.6" rotation="-60 0 45" radius=".02" height=".2" color="white"></a-cylinder>
         <a-cylinder position="1.3 .6 -1.6" rotation="-60 0 -45" radius=".02" height=".2" color="white"></a-cylinder>
-
-        <!--Captions-->
-        <a-text value="I lit up from Reno, I was trailed by twenty hounds" align="center" position="0 3.1 -4" rotation="-10 0 0" color="white" visible="true"></a-text>
-        <a-plane width="5" height=".3" align="center" position="0 3.1 -4.1" rotation="-10 0 0" color="black" visible="true"></a-plane>
-
-
         
       </a-entity>
+      
+       <!--Captions-->
+       <a-text value="I lit up from Reno, I was trailed by twenty hounds" align="center" position="0 3.1 -4" rotation="-10 0 0" color="white" visible="true"></a-text>
+        <a-plane width="5" height=".3" align="center" position="0 3.1 -4.1" rotation="-10 0 0" color="black" visible="true"></a-plane>
       
       
       
