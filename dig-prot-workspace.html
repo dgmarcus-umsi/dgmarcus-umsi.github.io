@@ -30,7 +30,7 @@
       <a-plane position="-4 1 -5" rotation="-10 10 0" width="4" height="4" color="#303030" shadow></a-plane>
       
       <!--lights-->
-      <a-entity id="light">
+      <a-entity id="light" visible="true">
         <a-cylinder opacity=".5" position="1 1.5 -3" rotation="-30 60 0" radius="0.15" height="3.2" color="#FFC65D"></a-cylinder>
         <a-cylinder opacity=".5" position="-2 1.5 -3" rotation="-50 -60 0" radius="0.15" height="3.6" color="#FFC65D"></a-cylinder>
         <a-cylinder opacity=".5" position="-.5 2 -3" rotation="-60 -10 0" radius="0.15" height="3.6" color="#FFC65D"></a-cylinder>
@@ -38,9 +38,9 @@
       </a-entity>
       
      
-      <!--<a-box position="1 -.9 -2" rotation="-30 0 0" width=".6" height=".6" color="white" event-set__enter="_event: mouseenter; _target: #light; visible: true"></a-box>-->
+      <a-box position="1 -.9 -2" rotation="-30 0 0" width=".6" height=".6" color="white" event-set__enter="_event: mouseenter; _target: #light; visible: true"></a-box>
       <!--settings button-->
-      <!--<a-image position="1 -.9 -2" width=".5" height=".5" rotation="-30 0 0" src="settings.png"></a-image>-->
+      <a-image position="1 -.9 -2" width=".5" height=".5" rotation="-30 0 0" src="settings.png"></a-image>
       
       <a-entity id="settings" visible="false">
         
