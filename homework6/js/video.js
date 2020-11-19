@@ -6,6 +6,7 @@ window.addEventListener("load", function() {
 
 document.querySelector("#play").addEventListener("click", function() {
 	document.getElementById("myVideo").play();
+	document.getElementById("volume").innerHTML = String((document.getElementById("myVideo").volume * 100) + "%")
 	console.log("Play Video");
 });
 
