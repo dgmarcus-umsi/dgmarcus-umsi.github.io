@@ -1,0 +1,296 @@
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    src: url("../fonts/Atkinson-Hyperlegible-Regular-102.ttf");
+}
+
+@font-face {
+    font-family: "Atkinson Hyperlegible Bold";
+    src: url("../fonts/Atkinson-Hyperlegible-Bold-102.ttf");
+}
+
+@font-face {
+    font-family: "Atkinson Hyperlegible Italic";
+    src: url("../fonts/Atkinson-Hyperlegible-Italic-102.ttf");
+}
+
+@font-face {
+    font-family: "Atkinson-Hyperlegible Bold Italic";
+    src: url("../fonts/Atkinson-Hyperlegible-BoldItalic-102.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	font-family: "Atkinson Hyperlegible";
+	background-color: #F8F8F8;
+ 	padding-top: 10vh;
+}
+
+h1 {
+    font-size: 6vw;
+}
+
+h2 {
+    font-size: 4em;
+}
+
+h3 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+li {
+    padding-bottom: 1vh;
+    font-size: 1.3em;
+}
+
+figcaption {
+    font-size: 1em;
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto;
+  }
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  bottom:40px;
+  position: relative;
+  opacity: 0;
+}
+
+.skip a:focus {
+  bottom:0px;
+  opacity: 1;
+  }
+
+body:focus {
+  border: 2px solid black;
+}
+
+.grid-container-portoflio-text {
+    display: grid;
+    padding: 5vh 15vw 5vh 6vw;
+}
+
+.portfolio-text {
+    margin: 2vh 0 2vh 0;
+}
+
+.grid-container-header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: #e8e8e8;
+    margin: 5vh 0 5vh 0;
+    padding: 3vh 0 3vh 0;
+}
+
+.grid-container-header > #grid-itm-1 {
+    grid-column: 2/12;
+}
+
+/*Navbar + media queries start
+Some of the code in the navbar + media queries section was inspired by this example: https://codepen.io/Colt/pen/NWGRPrd.
+I significantly edited the code to fit my design
+*/
+
+.flex-container-navbar  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin-left: .50em;
+}
+
+.logo, .navigation {
+    list-style: none;
+}
+
+.logo a, .navigation a {
+    text-decoration: none;
+    color: black;
+}
+
+.navigation  {
+    display: flex;
+}
+
+.navigation a {
+    display: block;
+    padding: .8em;
+}
+
+.navigation a:hover {
+    background: #e8e8e8;
+}
+
+/*Media query 1*/
+@media all and (max-width: 990px) {
+    .flex-container-navbar {
+        flex-direction: column;
+  }
+  
+    .logo {
+        margin: 0;
+    }
+  
+    .navigation  {
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+
+/*Media query 2*/
+@media all and (max-width: 600px) {
+ 
+    /*.logo {
+        margin: .25em 0;
+        align-self: left;
+    }*/
+  
+    .navigation {
+        flex-direction: column;
+    }  
+  
+    .navigation a { 
+        text-align: center; 
+        padding: 10px;
+        border-bottom: 1px solid rgba(0,0,0,0.1); 
+    }
+
+    .navigation .active { 
+        border-bottom: 2px solid black; 
+    }
+  
+    .navigation li:last-of-type a {
+        border-bottom: none;
+    }
+}
+/*navbar + media query section end*/
+
+.navlinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+.navlinks > li > a{
+    text-decoration: none;
+    color: black;
+    border-top: none;
+    margin-right: 2vw;
+}
+
+.navlinks > li > a:hover {
+  background-color: #faed27;
+}
+
+.footer {
+    background-color: #d6d6d6;
+    padding: 4vh 0 8vh 0;
+    border-bottom: 4px solid #5c5c5c;
+}
+
+.navlinks-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.navlinks-footer > li > a {
+    text-decoration: none;
+    color: black;
+    border-top: none;
+    margin-right: 2vw;
+    font-size: 14px;
+}
+
+.navlinks-footer > li > a:hover {
+  background-color: #b5b5b5;
+}
+
+.active {
+    border-bottom: 2px solid black;
+}
+
+.footer p {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.grid-container-projects {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1vw;
+    grid-column-gap: 1vw;
+    overflow: hidden;
+    justify-content: center;
+    padding-bottom: 10vh;
+}
+
+.grid-container-projects > div > img {
+    max-width: 28vw;
+    height: auto;
+}
+
+.grid-container-projects > div > img:hover {
+    max-width: 29vw;
+    border: 5px solid black;
+    opacity: .8;
+}
+
+.grid-container-about {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 10vh 0 2vh 0;
+    grid-row-gap: 2vh;
+
+}
+
+.grid-container-about > img {
+    max-width: 50vw;
+    height: auto;
+}
+
+.grid-container-about > #grid-item-1 {
+    grid-column: 2/12;
+}
+
+.grid-container-about > #grid-itm-2 {
+    grid-column: 2/12;
+}
+
+.grid-container-about > #grid-itm-3 {
+    grid-column: 2/12;
+}
+
+.grid-container-about > #grid-itm-4 {
+    grid-column: 2/12;
+    padding-bottom: 10vh;
+}
+
+.grid-container-about > #grid-itm-5 {
+    grid-column: 2/12;
+}
+
+.grid-container-about > #grid-itm-6 {
+    grid-column: 2/12;
+}
